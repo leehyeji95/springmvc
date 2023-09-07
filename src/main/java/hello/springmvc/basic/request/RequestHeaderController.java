@@ -22,6 +22,10 @@ public class RequestHeaderController {
                           HttpServletResponse response,
                           HttpMethod httpMethod, Locale locale,
                           @RequestHeader MultiValueMap<String, String> headerMap,
+                            /* MultiValueMap : 하나의 키에 여러 값을 받을 수 있다.
+                            * HTTP Header, HTTP 쿼리 파라미터에서 사용
+                            * keyA=value1&keyA=value2
+                            * */
                           @RequestHeader("host") String host,   // Header 의 필수 값
                           @CookieValue(value="myCookie", required = false) String cookie) {
 
